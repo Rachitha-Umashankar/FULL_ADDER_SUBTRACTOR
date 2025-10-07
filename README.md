@@ -10,7 +10,7 @@ To design a Full Adder and Full Subtractor circuit and verify its truth table in
 
 Hardware – PCs, Cyclone II , USB flasher
 
-Software – Quartus prime
+Software – Quartus II
 
 **Full Adder and Full Subtractor**
 
@@ -38,18 +38,73 @@ Borrow out = A'Bin + A'B + BBin
 
 **Truthtable**
 
+i)FULL ADDER
+
+![Image](https://github.com/user-attachments/assets/897cde7e-aa20-4c7c-83f3-34237c91554c)
+
+ii)FULL SUBTRACTOR
+
+![SUB](https://github.com/user-attachments/assets/b3f20ca0-68ee-44cf-b140-f01bc97657a9)
+
 **Procedure**
 
-Write the detailed procedure here
+ 1. Type the program in Quartus software.
+    
+ 2. Compile and run the program.
+
+ 3. Generate the RTL schematic and save the logic diagram.
+
+ 4. Create nodes for inputs and outputs to generate the timing diagram.
+
+ 5. For different input combinations generate the timing diagram
 
 **Program:**
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+i)FULL ADDER
+
+module funct1(a,b,c,d,f1);
+
+input a,b,c,d;
+
+output f1;
+
+assign f1=((~b & ~d)|(~a & b & d)|(a & b & ~c));
+
+endmodule
+
+ii)FULL SUBTRACTOR
+
+module funct2(w,x,y,z,f2);
+
+input w,x,y,z;
+
+output f2;
+
+assign f2=((~y & z)|( w & y )|(x & y));
+
+endmodule
+
 
 **RTL Schematic**
 
+i) FULL ADDER
+
+![diagram](https://github.com/user-attachments/assets/072fdb63-029d-437d-8468-7ed1328a40e0)
+
+ii)FULL SUBTRACTOR
+
+![snap](https://github.com/user-attachments/assets/64290ff9-eabe-465c-9493-45b2407fe883)
+
+
 **Output Timing Waveform**
+
+i)FULL ADDER
+
+![waveform](https://github.com/user-attachments/assets/5c7115f4-c8b4-4ed7-9162-bc1d75c22645)
+
+ii)FULL SUBTRACTOR
+
+![WAVE](https://github.com/user-attachments/assets/323d77f6-e0c8-4ab2-97b7-772a96ae0bf2)
 
 **Result:**
 
